@@ -1,0 +1,243 @@
+@import url('hettps://fonts.googleapis.com/css/css2?family=poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.banner
+{
+    min-height: 100vh;
+    background: #120e0f url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+}
+header
+{
+    position: absolute;
+    top: 40px;
+    display: flex;
+    align-items: center;
+}
+.logo img
+{
+    max-width: 120px;
+
+}
+.toggle
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle::before
+{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #120e0f;
+    transform: translateY(-6px);
+    transition: 0.5s;
+
+}
+.toggle.active::before
+{
+    transform: translateY(0) rotate(45deg);
+}
+.toggle::after
+{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #120e0f;
+    transform: translateY(6px);
+    transition: 0.5s;
+}
+.toggle.active::after
+{
+    transform: translateY(0px) rotate(-45deg);
+}
+.navigation
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background: #120e0f url(menuBg.jpg);
+    /* background-position: right; */
+    background-position: center;
+    background-size: cover;
+    display: none;
+    padding-right: 100px;
+}
+.navigation.active
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.navigation li
+{
+    list-style: none;
+    margin: 4px 0;
+}
+.navigation li a 
+{
+    color: #fff;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navigation li a:hover
+{
+    color: #e83c80;
+}
+.content
+{
+    position: relative;
+    max-width: 700px;
+}
+.content .textimg
+{
+    max-width: 600px;
+    width: 100%;
+}
+.content p
+{
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.75em;
+    font-weight: 300;
+}
+.btn
+{
+    position: relative;
+    background: #e83c80;
+    color: #fff;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-decoration: none;
+}
+.btn:hover
+{
+    background: #d43071;
+}
+.btn ion-icon
+{
+    font-size: 2em;
+    margin-right: 5px;
+}
+.clip
+{
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.clip .clipBox
+{
+    position: relative;
+    width: 340px;
+    height: 220px;
+    border: 8px solid #fff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #e83c80;
+}
+.clip .clipBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clip .clipBox:hover img
+{
+    opacity: 0.4;
+}
+.clip .clipBox ion-icon
+{
+    font-size: 4em;
+    color: #fff;
+}
+.sokialIcon
+{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.sokialIcon li
+{
+    list-style: none;
+}
+.sokialIcon li a
+{
+    font-size: 2em;
+    color: #fff;
+}
+.sokialIcon li a:hover
+{
+    color: #e83c80;
+}
+@media (max-width:1100px)
+{
+   .banner
+   {
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+   } 
+   .content
+   {
+    margin-top: 150px;
+   }
+   .clip
+   {
+    position: relative;
+    right: initial;
+    bottom: initial;
+    margin: 40px 0;
+   }
+   .sokialIcon
+   {
+    position: relative;
+    bottom: initial;
+    left: initial;
+   }
+   .navigation
+   {
+    padding-right: 40px;
+   }
+}
